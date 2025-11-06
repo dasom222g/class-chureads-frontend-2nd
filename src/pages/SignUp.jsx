@@ -35,9 +35,6 @@ const SignUp = () => {
 
     // 로딩중이면 사용자가 name, emaill, password값 작성 안하면 실행안함
     if (isLoading || !name || !email || !password) return;
-    console.log("name", name);
-    console.log("email", email);
-    console.log("password", password);
 
     setIsLoading(true);
 
@@ -50,7 +47,6 @@ const SignUp = () => {
         email,
         password
       );
-      console.log("🚀 ~credential:", credential);
 
       // 사용자 프로필 이름 지정
       await updateProfile(credential.user, {
