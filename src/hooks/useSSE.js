@@ -34,7 +34,7 @@ const useSSE = () => {
         //   type: eventType,
         //   data: data,
         // };
-        const result = JSON.parse(event.data);
+        const result = JSON.parse(event.data); // 자바스크립트 객체로 변환
 
         switch (result.type) {
           case "connected":
